@@ -10,20 +10,26 @@
 
 body {
   font-family: "Barlow Condensed", sans-serif;
+  background-color: #8CC461;
 }
+
 
 /* 
 -------------------------------------------------------------------------------
 HTML elements 
 -------------------------------------------------------------------------------
 */
+
+.allwrapper{
+  /* width: 100vw; */
+  height: 100%;
+  background-color: #8CC461;
+}
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: #8CC461;
+ 
   /* background: radial-gradient(
     134.34% 134.34% at 50% 0%,
     #1f3757 0%,
@@ -47,7 +53,7 @@ HTML elements
 }
 
 .score {
-  width: 150px;
+  /* width: 150px;
   height: 114px;
   background-color: white;
   border: 1px solid white;
@@ -56,10 +62,22 @@ HTML elements
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  width: 130px;
+    margin-left: 15px;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    text-align: center;
+    padding: 10px;
+
 }
-.comscore{
-  width: 150px;
+/* .cscore p{
+  color:#656565;
+    size: 17px;
+    font-weight: 600;
+} */
+.cscore{
+  /* width: 150px;
   height: 114px;
   background-color: white;
   border: 1px solid white;
@@ -68,36 +86,43 @@ HTML elements
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  width: 130px;
+    margin-left: 15px;
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    text-align: center;
+    padding: 10px;
+
 }
-.comscore h1{
-  color: #565468;
+.cscore h1{
+  color: #252525;
   font-size: 56px;
   font-family: "Barlow", sans-serif;
 }
-.comscore p{
-  color: #2a45c2;
+.cscore p{
+  color: #656565;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 19px;
   letter-spacing: 2.5px;
-  text-align: left;
+  /* text-align: left; */
 }
 .score h1 {
-  color: #565468;
+  color: #252525;
   font-size: 56px;
   font-family: "Barlow", sans-serif;
 }
 
 .score p {
-  color: #2a45c2;
+  color: #656565;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 19px;
   letter-spacing: 2.5px;
-  text-align: left;
+  /* text-align: left; */
 }
 
 
@@ -109,8 +134,8 @@ HTML elements
   opacity: 1;
   position: relative;
   width: 476px;
-  height: 430px;
-  margin-top: 100px;
+  /* height: 430px; */
+  margin-top: 50px;
   display: flex;
   z-index: 0;
   flex-wrap: wrap;
@@ -196,4 +221,101 @@ HTML elements
 .computerhand {
   display: flex;
   flex-direction: column;
+}
+
+
+/* .rule button{
+  background-color: transparent;
+  color: #ffff;
+  border: 2px solid #ffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  float: right;
+  margin: 20px;
+  margin-left: 80rem;
+}
+.rule button:hover{
+  background-color: #ffff;
+  color: #6b6b6b;
+  transition: all 0.2s ease-in-out;
+}
+
+.next button{
+  background-color: transparent;
+  color: #ffff;
+  border: 2px solid #ffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  float: right;
+  margin: 20px;
+  margin-left: 80rem;
+}
+.rule{
+  display: flex;
+}
+
+.part3{
+  position: sticky;
+  top: 100%;
+  display: flex;
+} */
+.part3{
+  /* float: right;
+  position: sticky; */
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: row;
+  /* top: 100%; */
+}
+#rulebtn{
+  background-color: transparent;
+  color: #ffff;
+  border: 2px solid #ffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#rulebtn:hover{
+  background-color: #ffff;
+  color: #6b6b6b;
+  transition: all 0.2s ease-in-out;
+}
+#nextbtn{
+  background-color: transparent;
+    color: #ffff;
+    border: 2px solid #ffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#nextbtn:hover{
+  background-color: #ffff;
+  color: #6b6b6b;
+  transition: all 0.2s ease-in-out;
+}
+.title h1{
+  color: #FFFFFF;
+}
+
+.allscore{
+  display: flex;
+    padding: 20px;
 }

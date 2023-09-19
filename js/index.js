@@ -4,8 +4,9 @@ const handOptions = {
   "scissors": "/assets/Scissors.png"
 }
 
+let CSCORE = 0;
 let SCORE = 0;
-let COMSCORE = 0;
+// let COMSCORE = 0;
 
 const pickUserHand = (hand) => {
   let hands = document.querySelector(".hands");
@@ -33,7 +34,7 @@ const pickComputerHand = (hand) => {
 const referee = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "scissors") {
     setDecision("YOU LOSE!");
-    setScore(COMSCORE + 1);
+    setScoree(CSCORE + 1);
   }
   if (userHand == "paper" && cpHand == "rock") {
     setDecision("YOU WIN!");
@@ -48,7 +49,7 @@ const referee = (userHand, cpHand) => {
   }
   if (userHand == "rock" && cpHand == "paper") {
     setDecision("YOU LOSE!");
-    setScore(COMSCORE + 1);
+    setScoree(CSCORE + 1);
   }
   if (userHand == "rock" && cpHand == "rock") {
     setDecision("It's a tie!");
@@ -58,7 +59,7 @@ const referee = (userHand, cpHand) => {
   }
   if (userHand == "scissors" && cpHand == "rock") {
     setDecision("YOU LOSE!");
-    setScore(COMSCORE + 1);
+    setScoree(CSCORE + 1);
   }
   if (userHand == "scissors" && cpHand == "paper") {
     setDecision("YOU WIN!");
@@ -78,12 +79,16 @@ const setDecision = (decision) => {
   document.querySelector(".decision h1").innerText = decision;
 }
 
+
+
 const setScore = (newScore) => {
   SCORE = newScore;
   document.querySelector(".score h1").innerText = newScore;
 }
-
-const setComscore = (newScore) => {
-  COMSCORE = newScore;
-  document.querySelector(".comscore h1").innerText = newScore;
+const setScoree = (newScoree) =>{
+  CSCORE = newScoree;
+  document.querySelector(".cscore h1").innerText = newScoree;
 }
+
+
+
