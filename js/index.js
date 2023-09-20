@@ -108,8 +108,7 @@ const playAgain = () =>{
 const myNext = () =>{
  let wrapper = document.querySelector(".wrapper");
  wrapper.style.display = "none";
- let nextbtn =document.querySelector("#nextbtn");
-  nextbtn.style.display = "none";
+ 
  let wongame =document.querySelector(".wongame");
   wongame.style.display = "block";
 }
