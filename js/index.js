@@ -28,13 +28,10 @@ const pickComputerHand = (hand) => {
 const referee = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "scissors") {
     setDecision("YOU LOSE!");
-    document.querySelector('userPickImage').style.background = "red";
     setScoree(CSCORE + 1);
   }
   if (userHand == "paper" && cpHand == "rock") {
     setDecision("YOU WIN!");
-    alert("asdfkjjn")
-    document.querySelector(".user-side").style.backgroundColor = "red";
     setScore(SCORE + 1);
   }
   if (userHand == "paper" && cpHand == "paper") {
