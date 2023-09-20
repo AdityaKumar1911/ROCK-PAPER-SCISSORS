@@ -99,8 +99,10 @@ const playAgain = () =>{
   let wongame =document.querySelector(".wongame");
   wongame.style.display = "none";
   
-  let contest  =document.querySelector(".hands ");
-  contest .style.display = "flex"
+  let hands  =document.querySelector(".hands ");
+  hands.style.display = "flex";
+  let contest  =document.querySelector(".contest ");
+  contest .style.display = "none"
   let wrapper  = document.querySelector(".wrapper ");
   wrapper .style.display = "flex";
 }
@@ -108,7 +110,8 @@ const playAgain = () =>{
 const myNext = () =>{
  let wrapper = document.querySelector(".wrapper");
  wrapper.style.display = "none";
- 
+ let nextbtn = document.querySelector("#nextbtn");
+ nextbtn.style.display = "none";
  let wongame =document.querySelector(".wongame");
   wongame.style.display = "block";
 }
