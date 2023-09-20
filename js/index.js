@@ -33,6 +33,8 @@ const referee = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "rock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
+    let wrapper  = document.querySelector("#nextbtn ");
+     wrapper.style.display = "block";
   }
   if (userHand == "paper" && cpHand == "paper") {
     setDecision("It's a tie!");
@@ -40,6 +42,8 @@ const referee = (userHand, cpHand) => {
   if (userHand == "rock" && cpHand == "scissors") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
+    let wrapper  = document.querySelector("#nextbtn ");
+     wrapper.style.display = "block";
   }
   if (userHand == "rock" && cpHand == "paper") {
     setDecision("YOU LOSE!");
@@ -58,6 +62,8 @@ const referee = (userHand, cpHand) => {
   if (userHand == "scissors" && cpHand == "paper") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
+    let wrapper  = document.querySelector("#nextbtn ");
+     wrapper.style.display = "block";
   }
 };
 
@@ -88,3 +94,22 @@ const setScoree = (newScoree) => {
 // Initialize the score display
 document.querySelector(".score h1").innerText = SCORE;
 document.querySelector(".cscore h1").innerText = CSCORE;
+
+const playAgain = () =>{
+  let wongame =document.querySelector(".wongame");
+  wongame.style.display = "none";
+  
+  let contest  =document.querySelector(".hands ");
+  contest .style.display = "flex"
+  let wrapper  = document.querySelector(".wrapper ");
+  wrapper .style.display = "flex";
+}
+
+const myNext = () =>{
+ let wrapper = document.querySelector(".wrapper");
+ wrapper.style.display = "none";
+ let nextbtn =document.querySelector("#nextbtn");
+  nextbtn.style.display = "none";
+ let wongame =document.querySelector(".wongame");
+  wongame.style.display = "block";
+}

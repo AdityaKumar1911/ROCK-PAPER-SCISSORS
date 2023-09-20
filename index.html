@@ -86,13 +86,25 @@
         </div>
       </div>
       <div class="part3">
-        <div id="notification">
+        <div id="notification" style="display: none">
           <p>aditya</p>
         </div>
         <div class="rule">
-          <button id="rulebtn" onclick="myFunction()">RULES</button>
-          <button id="nextbtn">NEXT</button>
+          <button id="nextbtn" onclick="myNext()">NEXT</button>
         </div>
+        <button id="rulebtn" onclick="myFunction()">RULES</button>
+      </div>
+    </section>
+    <section class="wongame">
+      <div class="vect">
+        <img src="/assets/Vectortrophy.png" alt="" />
+      </div>
+      <h2 class="wongame-heading">HURRAY!!</h2>
+      <h6 class="wongame-sub-heading">YOU WON THE GAME</h6>
+      <div class="vbtn">
+        <button class="filled-btn large" onclick="playAgain()">
+          play again
+        </button>
       </div>
     </section>
 
