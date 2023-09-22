@@ -1,113 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="css/styles.css" />
-    <meta charset="UTF-8" />
-    <meta ="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Rock Paper Scissors</title>
-  </head>
 
-  <body>
-    <section class="allwrapper">
-      <div class="wrapper">
-        <div class="scoreboard">
-          <div class="title">
-            <h1>ROCK</h1>
-            <h1>PAPER</h1>
-            <h1>SCISSORS</h1>
+<head>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet" />
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <section class="allwrapper">
+    <div class="wrapper">
+      <div class="scoreboard">
+        <div class="title">
+          <h1>ROCK</h1>
+          <h1>PAPER</h1>
+          <h1>SCISSORS</h1>
+        </div>
+        <div class="allscore">
+          <div class="cscore">
+            <p>COMPUTER SCORE</p>
+            <h1 id="textscore"></h1>
           </div>
-          <div class="allscore">
-            <div class="cscore">
-              <p>COMPUTER SCORE</p>
-              <h1 id="textscore"></h1>
-            </div>
-            <div class="score">
-              <p>YOUR SCORE</p>
-              <h1>0</h1>
-            </div>
+          <div class="score">
+            <p>YOUR SCORE</p>
+            <h1>0</h1>
           </div>
         </div>
-        <div class="hands">
-          <div class="rock">
-            <button id="rockb">
-              <img
-                src="/assets/icons8-fist-67 1 (1).png"
-                onclick="pickUserHand('rock')"
-              />
-            </button>
-          </div>
-          <!-- <div class="hand rock">
+      </div>
+      <div class="hands">
+        <div class="rock">
+          <button id="rockb">
+            <img src="/assets/icons8-fist-67 1 (1).png" onclick="pickUserHand('rock')" />
+          </button>
+        </div>
+        <!-- <div class="hand rock">
           <img src="/assets/icons8-fist-67 1 (1).png" onclick="pickUserHand('rock')"/>
         </div> -->
-          <div class="rpcscissors">
-            <div class="scissors">
-              <button>
-                <img src="/assets/sci.png" onclick="pickUserHand('scissors')" />
-              </button>
-            </div>
-          </div>
-          <!-- <div class="hand scissors">
-          <img src="/assets/Scissors.png" onclick="pickUserHand('scissors')"/>
-        </div> -->
-          <div class="paper">
+        <div class="rpcscissors">
+          <div class="scissors">
             <button>
-              <img src="/assets/pap.png" onclick="pickUserHand('paper')" />
+              <img src="/assets/sci.png" onclick="pickUserHand('scissors')" />
             </button>
           </div>
-          <!-- <div class="hand paper">
+        </div>
+        <!-- <div class="hand scissors">
+          <img src="/assets/Scissors.png" onclick="pickUserHand('scissors')"/>
+        </div> -->
+        <div class="paper">
+          <button>
+            <img src="/assets/pap.png" onclick="pickUserHand('paper')" />
+          </button>
+        </div>
+        <!-- <div class="hand paper">
               <img src="/assets/Paper.png" onclick="pickUserHand('paper')"/>
             </div> -->
-        </div>
-        <div class="contest">
-          <div class="userhand">
-            <h1>YOU PICKED</h1>
-            <div class="handImageContainer">
+      </div>
+      <div class="contest">
+        <div class="userhand">
+          <h1>YOU PICKED</h1>
+          <div class="handImageContainer">
+            <div class="baccolor">
               <img id="userPickImage" src="/assets/Paper.png" />
             </div>
           </div>
-          <div class="referee">
-            <div class="decision">
-              <h1>YOU WIN!</h1>
-            </div>
-            <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+        <div class="referee">
+          <div class="decision">
+            <h1>YOU WIN!</h1>
           </div>
-          <div class="computerhand">
-            <h1>PC PICKED</h1>
-            <div class="handImageContainer">
+          <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+        <div class="computerhand">
+          <h1>PC PICKED</h1>
+          <div class="handImageContainer">
+            <div class="baccolor2">
               <img id="computerPickImage" src="/assets/Paper.png" />
             </div>
           </div>
         </div>
       </div>
-      <div class="part3">
-        <div id="notification" style="display: none">
-          <p>aditya</p>
+    </div>
+    <div class="part3">
+      <div class="ruledata">
+        <div class="closeimg" onclick="closebtn()">
+          <img src="/assets/X.png" alt="">
+          <!-- <img src="/assets/Ellipse 6.png" alt=""> -->
         </div>
-        <div class="rule">
-          <button id="nextbtn" onclick="myNext()">NEXT</button>
+        <div id="notification">
+          <h3>Game Rules</h3>
+          <ul class="gamerulestext">
+            <li>
+              <img src="/assets/Rectangle 5.png" alt="">
+              Rock beats scissors, scissors beat paper,and paper beats rock.
+            </li>
+            <li>
+              <img src="/assets/Rectangle 5.png" alt="">
+              Agree ahead of time whether you’ll count off “rock, paper, scissors,
+              shoot” or just “rock, paper, scissors.”
+            </li>
+            <li><img src="/assets/Rectangle 5.png" alt="">
+              Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+            <li>
+              <img src="/assets/Rectangle 5.png" alt="">
+              If both players lay down the same hand, each player lays down another hand
+            </li>
+          </ul>
         </div>
-        <button id="rulebtn" onclick="myFunction()">RULES</button>
       </div>
-    </section>
-    <section class="wongame">
-      <div class="vect">
-        <img src="/assets/Vectortrophy.png" alt="" />
+      <div class="rule">
+        <button id="nextbtn" onclick="myNext()">NEXT</button>
       </div>
-      <h2 class="wongame-heading">HURRAY!!</h2>
-      <h6 class="wongame-sub-heading">YOU WON THE GAME</h6>
-      <div class="vbtn">
-        <button class="filled-btn large" onclick="playAgain()">
-          play again
-        </button>
-      </div>
-    </section>
+      <button id="rulebtn" onclick="myRules()">RULES</button>
+    </div>
+  </section>
+  <section class="wongame">
+    <div class="vect">
+      <img src="/assets/Vectortrophy.png" alt="" />
+    </div>
+    <h2 class="wongame-heading">HURRAY!!</h2>
+    <h6 class="wongame-sub-heading">YOU WON THE GAME</h6>
+    <div class="vbtn">
+      <button class="filled-btn large" onclick="playAgain()">
+        play again
+      </button>
+    </div>
+  </section>
 
-    <script src="/js/index.js"></script>
-  </body>
+  <script src="/js/index.js"></script>
+</body>
+
 </html>

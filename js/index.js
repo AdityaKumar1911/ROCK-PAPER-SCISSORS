@@ -24,53 +24,96 @@ const pickComputerHand = (hand) => {
   document.getElementById("computerPickImage").src = handOptions[cpHand];
   referee(hand, cpHand);
 };
+
+
 // document.querySelector('handImageContainer').style.background = "red !important";
 const referee = (userHand, cpHand) => {
   if (userHand == "paper" && cpHand == "scissors") {
     setDecision("YOU LOSE!");
     setScoree(CSCORE + 1);
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "contents";
+    let baccolor2 = document.querySelector(".baccolor2");
+    baccolor2.style.display = "block";
   }
   if (userHand == "paper" && cpHand == "rock") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "block";
+    let baccolor2 = document.querySelector(".baccolor2");
+    baccolor2.style.display = "contents";
     let wrapper  = document.querySelector("#nextbtn ");
      wrapper.style.display = "block";
   }
   if (userHand == "paper" && cpHand == "paper") {
     setDecision("It's a tie!");
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "contents";
+    let baccolor2 = document.querySelector(".baccolor2");
+    baccolor2.style.display = "contents";
+    // document.getElementById("computerPickImage").style.backgroundColor = "none";
   }
   if (userHand == "rock" && cpHand == "scissors") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "block";
     let wrapper  = document.querySelector("#nextbtn ");
      wrapper.style.display = "block";
+     let baccolor2 = document.querySelector(".baccolor2");
+     baccolor2.style.display = "contents";
   }
   if (userHand == "rock" && cpHand == "paper") {
     setDecision("YOU LOSE!");
     setScoree(CSCORE + 1);
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "contents";
+    let baccolor2 = document.querySelector(".baccolor2");
+    baccolor2.style.display = "block";
   }
   if (userHand == "rock" && cpHand == "rock") {
     setDecision("It's a tie!");
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "contents";
+    let baccolor2 = document.querySelector(".baccolor2");
+    baccolor2.style.display = "contents";
+    // document.getElementById("computerPickImage").style.backgroundColor = "none";
   }
   if (userHand == "scissors" && cpHand == "scissors") {
     setDecision("It's a tie!");
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "contents";
+    let baccolor2 = document.querySelector(".baccolor2");
+    baccolor2.style.display = "contents";
+    // document.getElementById("computerPickImage").style.backgroundColor = "none";
   }
   if (userHand == "scissors" && cpHand == "rock") {
     setDecision("YOU LOSE!");
     setScoree(CSCORE + 1);
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "contents";
+    let baccolor2= document.querySelector(".baccolor2");
+    baccolor2.style.display = "block";
   }
   if (userHand == "scissors" && cpHand == "paper") {
     setDecision("YOU WIN!");
     setScore(SCORE + 1);
+    let baccolor = document.querySelector(".baccolor");
+    baccolor.style.display = "block";
     let wrapper  = document.querySelector("#nextbtn ");
      wrapper.style.display = "block";
+     let baccolor2= document.querySelector(".baccolor2");
+     baccolor2.style.display = "contents";
   }
 };
+
 
 const restartGame = () => {
   let contest = document.querySelector(".contest");
   contest.style.display = "none";
-
+  let nextbtn = document.querySelector("#nextbtn");
+  nextbtn.style.display = "none";
   let hands = document.querySelector(".hands");
   hands.style.display = "flex";
 };
@@ -98,7 +141,8 @@ document.querySelector(".cscore h1").innerText = CSCORE;
 const playAgain = () =>{
   let wongame =document.querySelector(".wongame");
   wongame.style.display = "none";
-  
+  // let nextbtn =document.querySelector("#nextbtn")
+  // nextbtn.style.display = "none"
   let hands  =document.querySelector(".hands ");
   hands.style.display = "flex";
   let contest  =document.querySelector(".contest ");
@@ -114,4 +158,13 @@ const myNext = () =>{
  nextbtn.style.display = "none";
  let wongame =document.querySelector(".wongame");
   wongame.style.display = "block";
+}
+
+const myRules = () =>{
+  let ruledata = document.querySelector(".ruledata");
+  ruledata.style.display = "block";
+}
+const closebtn = () =>{
+  let ruledata = document.querySelector(".ruledata");
+  ruledata.style.display = "none";
 }
